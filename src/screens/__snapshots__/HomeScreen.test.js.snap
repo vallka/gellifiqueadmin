@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen Rendering should match to snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#00f",
+      "flex": 1,
+    }
+  }
+>
+  <MyBackground />
+  <Component
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <MyButton
+      onPress={[Function]}
+      text="Orders"
+    />
+    <MyButton
+      onPress={[Function]}
+      text="Orders"
+    />
+    <MyButton
+      onPress={[Function]}
+      text="Orders"
+    />
+  </Component>
+</Component>
+`;

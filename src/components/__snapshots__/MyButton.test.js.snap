@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyButton Rendering should match to snapshot 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  delayPressOut={100}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#C108C7",
+      "borderRadius": 10,
+      "marginBottom": 20,
+      "marginLeft": 40,
+      "marginRight": 40,
+      "marginTop": 20,
+      "padding": 10,
+    }
+  }
+  underlayColor="black"
+>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 24,
+      }
+    }
+  >
+    TEST LABEL
+  </Component>
+</TouchableHighlight>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabBarIcon Rendering TabBarIcon Rendering should match to snapshot 1`] = `
+<Icon
+  allowFontScaling={false}
+  color="#333"
+  size={26}
+  style={
+    Object {
+      "marginBottom": -3,
+    }
+  }
+/>
+`;
+
+exports[`TabBarIcon Rendering TabBarIcon focused Rendering should match to snapshot 1`] = `
+<Icon
+  allowFontScaling={false}
+  color="#d73672"
+  size={26}
+  style={
+    Object {
+      "marginBottom": -3,
+    }
+  }
+/>
+`;

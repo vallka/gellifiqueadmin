@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartScreen Rendering should match to snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <MyBackground />
+  <Component
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Component>
+      <Component
+        style={
+          Object {
+            "color": "red",
+            "fontSize": 30,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        FlatList 
+        4
+      </Component>
+      <FlatList
+        data={
+          Array [
+            Object {
+              "address1": "11",
+              "address2": "COALBOURN LANE",
+              "city": "Amblecote, Stourbridge",
+              "country": "United Kingdom",
+              "current_state": 4,
+              "date_add": "2019-04-16 12:36:03",
+              "date_upd": "2019-04-16 12:57:09",
+              "email": "karengoodeevans@gmail.com",
+              "firstname": "Karen",
+              "id_address_delivery": 394,
+              "id_country": 17,
+              "id_customer": 955,
+              "id_order": 307,
+              "lastname": "Evans",
+              "phone": "07903647579",
+              "postcode": "DY8 4HQ",
+              "reference": "TETUTWTEP",
+              "shipping_number": "P2G59033009",
+              "total_paid": "10.990000",
+              "total_products_wt": "7.490000",
+              "total_shipping_tax_incl": "3.500000",
+            },
+            Object {
+              "address1": "51 SYDENHAM ROAD",
+              "address2": "",
+              "city": "CROYDON",
+              "country": "United Kingdom",
+              "current_state": 4,
+              "date_add": "2019-04-16 11:23:53",
+              "date_upd": "2019-04-16 11:59:18",
+              "email": "Superdrug@vallka.com",
+              "firstname": "Superdrug",
+              "id_address_delivery": 393,
+              "id_country": 17,
+              "id_customer": 954,
+              "id_order": 306,
+              "lastname": "Superdrug",
+              "phone": "",
+              "postcode": "CR0 2EU",
+              "reference": "GJZOHKKYP",
+              "shipping_number": "P2G59030469",
+              "total_paid": "106.430000",
+              "total_products_wt": "114.370000",
+              "total_shipping_tax_incl": "3.500000",
+            },
+            Object {
+              "address1": "156 Sandy Lane ",
+              "address2": "Lower Darwen ",
+              "city": "Darwen",
+              "country": "United Kingdom",
+              "current_state": 4,
+              "date_add": "2019-04-16 07:41:39",
+              "date_upd": "2019-04-16 12:15:25",
+              "email": "jktorres@virginmedia.com",
+              "firstname": "Kathryn",
+              "id_address_delivery": 363,
+              "id_country": 17,
+              "id_customer": 514,
+              "id_order": 305,
+              "lastname": "Leal Torres ",
+              "phone": "07800888212",
+              "postcode": "BB3 0PL",
+              "reference": "ZKCXZAAWZ",
+              "shipping_number": "P2G59031251",
+              "total_paid": "15.470000",
+              "total_products_wt": "11.970000",
+              "total_shipping_tax_incl": "3.500000",
+            },
+            Object {
+              "address1": "248 Cairnhill Circus ",
+              "address2": "",
+              "city": "Glasgow ",
+              "country": "United Kingdom",
+              "current_state": 4,
+              "date_add": "2019-04-15 23:26:10",
+              "date_upd": "2019-04-16 12:08:03",
+              "email": "eviennagoodman@hotmail.co.uk",
+              "firstname": "Evienna",
+              "id_address_delivery": 392,
+              "id_country": 17,
+              "id_customer": 953,
+              "id_order": 304,
+              "lastname": "Goodman",
+              "phone": "07792079479",
+              "postcode": "G523NN ",
+              "reference": "YCSHJLGDQ",
+              "shipping_number": "P2G59030877",
+              "total_paid": "16.700000",
+              "total_products_wt": "13.890000",
+              "total_shipping_tax_incl": "3.500000",
+            },
+          ]
+        }
+        disableVirtualization={false}
+        horizontal={false}
+        initialNumToRender={10}
+        keyExtractor={[Function]}
+        maxToRenderPerBatch={10}
+        numColumns={1}
+        onEndReachedThreshold={2}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        updateCellsBatchingPeriod={50}
+        windowSize={21}
+      />
+    </Component>
+  </Component>
+</Component>
+`;

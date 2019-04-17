@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyCompo Rendering MyBackground Rendering - should match to snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "height": "100%",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": "100%",
+    }
+  }
+>
+  <Component
+    source={1}
+    style={
+      Object {
+        "flex": 1,
+        "height": null,
+        "resizeMode": "cover",
+        "width": null,
+      }
+    }
+  />
+</Component>
+`;
+
+exports[`MyCompo Rendering MyButton Rendering should match to snapshot 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  delayPressOut={100}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#C108C7",
+      "borderRadius": 10,
+      "marginBottom": 20,
+      "marginLeft": 40,
+      "marginRight": 40,
+      "marginTop": 20,
+      "padding": 10,
+    }
+  }
+  underlayColor="black"
+>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 24,
+      }
+    }
+  >
+    TEST LABEL
+  </Component>
+</TouchableHighlight>
+`;
