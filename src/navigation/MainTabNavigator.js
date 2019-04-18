@@ -6,7 +6,8 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import CartScreen from '../screens/CartScreen';
+//import CartScreen from '../screens/CartScreen';
+import OrdersScreen from '../screens/OrdersScreen';
 import OrderDetailsScreen from '../screens/OrderDetailsScreen';
 
 import AccountScreen from '../screens/AccountScreen';
@@ -36,18 +37,6 @@ HomeStack.navigationOptions = {
     />
   ),
   tabBarOnPress: _tabBarOnPress
-  /*
-  tabBarOnPress: ({ navigation, defaultHandler }) => {
-    console.log('nnn:'+navigation);
-    //console.log(navigation.state.routes[0].params.ths)
-    if (navigation.isFocused()) {
-      navigation.state.routes[0].params.ths._reload()
-    }
-    else {
-      defaultHandler();
-    }
-  }
-  */
 };
 
 const LinksStack = createStackNavigator({
@@ -80,13 +69,13 @@ SearchStack.navigationOptions = {
 };
 
 
-const CartStack = createStackNavigator({
-  Orders: CartScreen,
+const OrdersStack = createStackNavigator({
+  Orders: OrdersScreen,
   OrderDetails: OrderDetailsScreen,
 });
 
-CartStack.navigationOptions = {
-  tabBarLabel: 'Cart',
+OrdersStack.navigationOptions = {
+  tabBarLabel: 'Orders',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -129,7 +118,7 @@ SettingsStack.navigationOptions = {
 export default createBottomTabNavigator({
   HomeStack,
   SearchStack,
-  CartStack,
+  OrdersStack,
   AccountStack,
   //SettingsStack,
 },

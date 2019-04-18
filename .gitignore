@@ -6,3 +6,4 @@ npm-debug.*
 *.key
 *.mobileprovision
 *.0
+src/_secrets

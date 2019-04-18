@@ -1,11 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import CartScreen from './CartScreen';
+import OrdersScreen from './OrdersScreen';
 
 import * as axios from "axios";
 jest.mock("axios");
 
-describe('CartScreen Rendering', () => {
+describe('OrdersScreen Rendering', () => {
     it('should match to snapshot', async () => {
 
         axios.get.mockImplementation(() =>
@@ -15,8 +15,7 @@ describe('CartScreen Rendering', () => {
             })
         );
 
-
-        const component = shallow(<CartScreen />)
+        const component = shallow(<OrdersScreen />)
         await component.instance().componentDidMount();
         component.update();
         expect(component).toMatchSnapshot()

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, FlatList,ScrollView,TouchableOpacity,ActivityIn
 import axios from "axios";
 import { MyButton, MyBackground } from '../components/MyCompo';
 
-export default class ListScreen extends React.Component {
+export default class OrdersScreen extends React.Component {
   static navigationOptions = {
     title: 'Orders',
     headerStyle: { backgroundColor: 'black' },
@@ -21,46 +21,24 @@ export default class ListScreen extends React.Component {
   }
   
   //baseURL = 'https://www.gellifique.co.uk/vk/api-xml2json.php?q=https%3A%2F%2Fwww.gellifique.co.uk%2Fapi%2Forders%3Fsort%3D[id_DESC]%26limit%3D[0%2C10]%26display%3D[id%2Creference%2Cdate_add%2Cdate_upd%2Ccurrent_state%2Cshipping_number]%26ws_key%3DXFEV7P23B94VH1PNMITA73CA3G5RJBS1';
-
   //apiUrl = 'https://www.gellifique.co.uk/api/orders?sort=[id_DESC]&limit=[0,20]&display=[id,reference,date_add,date_upd,current_state,shipping_number]&ws_key=XFEV7P23B94VH1PNMITA73CA3G5RJBS1';
   //baseURL = 'https://www.gellifique.co.uk/vk/api-xml2json.php?q=';
   //let url = this.baseURL + encodeURIComponent(this.apiUrl);
 
-  baseURL = 'https://www.gellifique.co.uk/apipy/orders';
-
   getData = async (ev)=>{
     console.log('getData');
     this.setState({loading:true, error: null});
+    const cnf = require('../_secrets/config.json');
+    console.log('getData url:'+cnf.baseUrl);
+    let url = cnf.baseUrl;
 
     try {
-      console.log('a0') ;
-      let url = this.baseURL;
       console.log(url);
       const response = await axios.get(url);
-
-      console.log('a') ;
-      console.log(response.data) ;
-      console.log(response.status) ;
-      console.log('b') ;
-
-      this.showData(response.data);
+      this.setState({data:response.data,loading:false});
     } catch (error) {
-      console.log('e') ;
-      console.error(error)
-      console.log('ee') ;
+      this.setState({loading: false, error: error});
     }
-    console.log('11') ;
-  }
-  showData = (data)=>{
-    console.log('showData');
-    //console.log(this.state);
-
-    console.log('showData========================');
-    //console.log(responseDoc);
-    //console.log(data);
-    //console.log('showData 1========================');
-
-    this.setState({data:data,loading:false});
   }
 
   translateState = (id)=>{
@@ -77,13 +55,9 @@ export default class ListScreen extends React.Component {
     return States[id];
   }
 
-  badStuff = (err) => {
-      this.setState({loading: false, error: err.message});
-  }
   async componentDidMount(){
     console.log('componentDidMount');
     await this.getData();
-      //geolocation -> fetch
   }
 
   _onPressItem = (id,reference) => {
@@ -102,20 +76,17 @@ export default class ListScreen extends React.Component {
             justifyContent: 'center',
           }}>
                 { this.state.loading && (
-                  <View>
                   <ActivityIndicator size="large" color="#C108C7" />
-                  <Text style={styles.err}>ActivityIndicator</Text>
-                  </View>
                   )}
                 { this.state.error && (
                     <Text style={styles.err}>{this.state.error}</Text>
                 )}
                 { !this.state.loading && this.state.data && this.state.data.length > 0 && (
-                  <View>
-                  <Text style={styles.err}>FlatList {this.state.data.length}</Text>
                   <FlatList
                   data={this.state.data}
                   keyExtractor={item => item.id_order.toString()}
+                  onRefresh={this.getData}
+                  refreshing={this.state.loading}
                   renderItem={({item})=>(
                     <View >  
                     <View  style={styles.item}>  
@@ -154,8 +125,7 @@ export default class ListScreen extends React.Component {
                     </View>  
                     </View>  
                   )}
-                />
-                </View>    
+                  />
                 )}
 
         </View>
