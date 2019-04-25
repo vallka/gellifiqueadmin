@@ -1,8 +1,9 @@
 import React from 'react';
 import { 
-  StyleSheet, Text, View, Button, ScrollView, Image, FlatList,TouchableOpacity,ActivityIndicator, Dimensions, Alert, Modal ,Vibration
-  } from 'react-native';
+  StyleSheet, Text, View, FlatList, ActivityIndicator, Alert, Vibration
+} from 'react-native';
 import { SecureStore } from 'expo';
+import axios from "axios";
 
 import { MyBackground } from '../components/MyCompo';
 import { OrderHeader,OrderFooter,OrderItem } from '../components/OrderDetails';
@@ -30,57 +31,48 @@ export default class AlbumScreen extends React.Component {
         modalVisible: false,
     }
   }
-  baseURL = 'https://www.gellifique.co.uk/apipy/orders/';
 
-  getData = (ev)=>{
+  getData = async (ev)=>{
     const itemId = this.props.navigation.getParam('id', '');
-    //const itemId = '16';
 
     this.setState({loading:true, error: null, albumId: itemId});
-    let url = this.baseURL + itemId;
-    console.log('getData:'+url);
-    let req = {
-      method: 'GET',
-      headers: {},
-    };
 
-    fetch(url,req)
-    .then(response=>response.json())
-    .then(this.showData)
-    .catch(this.badStuff)
+    const cnf = require('../_secrets/config.json');
+    //console.log('getData url:'+cnf.baseUrl);
+    let url = cnf.baseUrl + '/' + itemId;
+
+    try {
+      console.log(url);
+      const response = await axios.get(url);
+  
+      //this.setState({data:response.data,loading:false});
+      await this.showData(response.data)
+    } catch (error) {
+      this.setState({loading: false, error: error});
+    }
   }
+
   showData = async (data)=>{
-    console.log('showData========================');
+    //console.log('showData========================');
     //console.log(responseDoc);
-    console.log(data);
-    console.log('showData 1========================');
+    //console.log(data);
+    //console.log('showData 1========================');
 
     try {
       const value = await SecureStore.getItemAsync('order'+this.props.navigation.getParam('id', ''));
       if (value !== null) {
-        // We have data!!
-        //console.log(JSON.parse(value));
-        //console.log(data[0])
         data[0].processed_items = JSON.parse(value)
-
-      }
-      else {
-        //console.log('no value');
-
       }
     } catch (error) {
-      console.log('Error reading data');
+      console.log('Error reading data'+error);
     }
 
     this.setState({data:data,loading:false});
   }
 
-  badStuff = (err) => {
-    this.setState({loading: false, error: err.message});
-  }
-  componentDidMount(){
+  async componentDidMount(){
     console.log('componentDidMount');
-    this.getData();
+    await this.getData();
   }
 
   _onPressItem = (id) => {
@@ -93,7 +85,20 @@ export default class AlbumScreen extends React.Component {
 
   addItem = async (id) => {
     console.log('Add:'+id+' '+this.state.data[0].id_order);
+
     let data = this.state.data
+    let found = -1;
+    for (let i=0;i<data[0].items.length;++i) {
+      if (data[0].items[i].product_id == id) {
+        found = i;
+        break;
+
+      }
+    }
+    if (found == -1) {
+      return;
+    }
+
     if (data[0].processed_items) {
       console.log('yes')
     }
@@ -102,13 +107,30 @@ export default class AlbumScreen extends React.Component {
       data[0].processed_items = {}
     }
     if (data[0].processed_items['product'+id]) {
-      data[0].processed_items['product'+id]++;
+      if (data[0].processed_items['product'+id] < data[0].items[found].product_quantity) {
+        data[0].processed_items['product'+id]++;
+      }
     }
     else {
-      data[0].processed_items['product'+id] = 1;
+      if (0 < data[0].items[found].product_quantity) {
+        data[0].processed_items['product'+id] = 1;
+      }
     }
+    let full=0;
+    for (let i=0;i<data[0].items.length;++i) {
+      if (data[0].processed_items['product'+data[0].items[i].product_id] >= data[0].items[i].product_quantity) {
+        full++;
+      }
+    }
+    if (full==data[0].items.length) {
+      data[0].processed_items.processed_all = true;
+      Vibration.vibrate([0,100,150,100,150,100]);
+    }
+    else {
+      Vibration.vibrate(100);
+    }
+
     await SecureStore.setItemAsync('order'+this.state.data[0].id_order, JSON.stringify(data[0].processed_items));
-    Vibration.vibrate(100);
     this.setState({data:data});
   }
 

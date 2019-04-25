@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderDetails components Rendering OrderFooter Rendering - all processed - should match to snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#C108C780",
+      "flexDirection": "row",
+      "padding": 5,
+    }
+  }
+>
+  <MyButton
+    text="Reset"
+  />
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="#00FF00"
+      name="md-checkbox-outline"
+      size={28}
+    />
+  </Component>
+</Component>
+`;
+
+exports[`OrderDetails components Rendering OrderFooter Rendering should match to snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#C108C780",
+      "flexDirection": "row",
+      "padding": 5,
+    }
+  }
+>
+  <MyButton
+    text="Reset"
+  />
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  />
+</Component>
+`;
+
+exports[`OrderDetails components Rendering OrderHeader Rendering - all processed - should match to snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#C108C780",
+      "padding": 5,
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 14,
+      }
+    }
+  >
+    17/04/19 08:05
+  </Component>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 14,
+      }
+    }
+  >
+    ami freeman
+  </Component>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 14,
+      }
+    }
+  >
+    44 Bala Street Anfield Liverpool
+  </Component>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 14,
+      }
+    }
+  >
+    L4 2QW
+  </Component>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 14,
+      }
+    }
+  >
+    amii_f_@hotmail.com
+  </Component>
+  <Component
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 14,
+          "marginRight": 15,
+        }
+      }
+    >
+      Positions: 
+      3
+    </Component>
+    <Component
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 14,
+          "marginRight": 15,
+        }
+      }
+    >
+      Total items: 
+      6
+       : 
+      1
+    </Component>
+    <Icon
+      allowFontScaling={false}
+      color="#00FF00"
+      name="md-checkbox-outline"
+      size={20}
+      style={
+        Object {
+          "marginTop": 0,
+        }
+      }
+    />
+  </Component>
+</Component>
+`;
+
+exports[`OrderDetails components Rendering OrderHeader Rendering should match to snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "backgroundColor": "#C108C780",
+      "padding": 5,
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 14,
+      }
+    }
+  >
+    17/04/19 08:05
+  </Component>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 14,
+      }
+    }
+  >
+    ami freeman
+  </Component>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 14,
+      }
+    }
+  >
+    44 Bala Street Anfield Liverpool
+  </Component>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 14,
+      }
+    }
+  >
+    L4 2QW
+  </Component>
+  <Component
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 14,
+      }
+    }
+  >
+    amii_f_@hotmail.com
+  </Component>
+  <Component
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 14,
+          "marginRight": 15,
+        }
+      }
+    >
+      Positions: 
+      3
+    </Component>
+    <Component
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 14,
+          "marginRight": 15,
+        }
+      }
+    >
+      Total items: 
+      6
+       : 
+      0
+    </Component>
+  </Component>
+</Component>
+`;
+
+exports[`OrderDetails components Rendering OrderItem Rendering - processed -  should match to snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00000070",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "paddingBottom": 5,
+    }
+  }
+>
+  <Component
+    source={
+      Object {
+        "uri": "https://www.gellifique.co.uk/670-medium_default/img.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": 375,
+        "resizeMode": "contain",
+        "width": 375,
+      }
+    }
+  />
+  <Component
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 14,
+          "paddingLeft": 8,
+        }
+      }
+    >
+      Pro 036 15ml (193)
+    </Component>
+    <Component
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 14,
+          "paddingLeft": 8,
+        }
+      }
+    >
+      P01-036
+    </Component>
+    <Component
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 14,
+          "paddingLeft": 8,
+        }
+      }
+    >
+      Quantity: 
+      1
+       
+       : 
+       
+      1
+    </Component>
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "marginBottom": 25,
+          "marginLeft": 40,
+          "marginRight": 40,
+          "marginTop": 25,
+          "padding": 10,
+        }
+      }
+    >
+      <Icon
+        allowFontScaling={false}
+        color="#00FF00"
+        name="md-checkbox-outline"
+        size={26}
+      />
+    </Component>
+  </Component>
+</Component>
+`;
+
+exports[`OrderDetails components Rendering OrderItem Rendering should match to snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00000070",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "paddingBottom": 5,
+    }
+  }
+>
+  <Component
+    source={
+      Object {
+        "uri": "https://www.gellifique.co.uk/670-medium_default/img.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": 375,
+        "resizeMode": "contain",
+        "width": 375,
+      }
+    }
+  />
+  <Component
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 14,
+          "paddingLeft": 8,
+        }
+      }
+    >
+      Pro 036 15ml (193)
+    </Component>
+    <Component
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 14,
+          "paddingLeft": 8,
+        }
+      }
+    >
+      P01-036
+    </Component>
+    <Component
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 14,
+          "paddingLeft": 8,
+        }
+      }
+    >
+      Quantity: 
+      1
+       
+       : 
+       
+      0
+    </Component>
+    <MyButton
+      onLongPress={[Function]}
+      onPress={[Function]}
+      text="+"
+    />
+  </Component>
+</Component>
+`;

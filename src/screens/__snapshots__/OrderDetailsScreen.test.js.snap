@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderDetailsScreen Rendering should match to snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <MyBackground />
+  <Component
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <FlatList
+      ListFooterComponent={[Function]}
+      ListHeaderComponent={[Function]}
+      data={
+        Array [
+          Object {
+            "id_image": 670,
+            "product_id": 193,
+            "product_name": "Pro 036 15ml",
+            "product_quantity": 1,
+            "product_reference": "P01-036",
+            "total_price_tax_incl": "6.370000",
+            "unit_price_tax_incl": "6.366500",
+          },
+          Object {
+            "id_image": 1544,
+            "product_id": 614,
+            "product_name": "Pro 024 15ml",
+            "product_quantity": 2,
+            "product_reference": "P01- 024",
+            "total_price_tax_incl": "6.370000",
+            "unit_price_tax_incl": "6.366500",
+          },
+          Object {
+            "id_image": 1893,
+            "product_id": 730,
+            "product_name": "Architect Gel (white)",
+            "product_quantity": 3,
+            "product_reference": "P03 - AGW",
+            "total_price_tax_incl": "8.990000",
+            "unit_price_tax_incl": "8.990000",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      updateCellsBatchingPeriod={50}
+      windowSize={21}
+    />
+  </Component>
+</Component>
+`;

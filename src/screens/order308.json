@@ -1,0 +1,54 @@
+[
+    {
+      "address1": "44 Bala Street",
+      "address2": "Anfield",
+      "city": "Liverpool",
+      "country": "United Kingdom",
+      "current_state": 4,
+      "date_add": "2019-04-17 08:05:37",
+      "date_upd": "2019-04-17 12:08:02",
+      "email": "amii_f_@hotmail.com",
+      "firstname": "ami",
+      "id_address_delivery": 395,
+      "id_country": 17,
+      "id_customer": 958,
+      "id_order": 308,
+      "items": [
+        {
+          "id_image": 670,
+          "product_id": 193,
+          "product_name": "Pro 036 15ml",
+          "product_quantity": 1,
+          "product_reference": "P01-036",
+          "total_price_tax_incl": "6.370000",
+          "unit_price_tax_incl": "6.366500"
+        },
+        {
+          "id_image": 1544,
+          "product_id": 614,
+          "product_name": "Pro 024 15ml",
+          "product_quantity": 2,
+          "product_reference": "P01- 024",
+          "total_price_tax_incl": "6.370000",
+          "unit_price_tax_incl": "6.366500"
+        },
+        {
+          "id_image": 1893,
+          "product_id": 730,
+          "product_name": "Architect Gel (white)",
+          "product_quantity": 3,
+          "product_reference": "P03 - AGW",
+          "total_price_tax_incl": "8.990000",
+          "unit_price_tax_incl": "8.990000"
+        }
+      ],
+      "lastname": "freeman",
+      "phone": "+447501834612",
+      "postcode": "L4 2QW",
+      "reference": "RAJFNPEDN",
+      "shipping_number": "P2G59061434",
+      "total_paid": "25.230000",
+      "total_products_wt": "21.730000",
+      "total_shipping_tax_incl": "3.500000"
+    }
+  ]

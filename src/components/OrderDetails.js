@@ -53,13 +53,15 @@ export class OrderItem extends React.Component {
 }
 export class OrderHeader extends React.Component {
     render() {
-        let n=0;
-        this.props.data.items.forEach((i)=>{n += i.product_quantity})
+        let needed=0;
+        this.props.data.items.forEach((i)=>{needed += i.product_quantity})
 
         let readyQnt=0;
         if (this.props.data.processed_items) {
             for (let i in this.props.data.processed_items) {
-                readyQnt += this.props.data.processed_items[i];
+                if (i.substr(0,7)=='product') {
+                    readyQnt += this.props.data.processed_items[i];
+                }
             }
         }
 
@@ -91,9 +93,9 @@ export class OrderHeader extends React.Component {
                       Positions: {this.props.data.items.length}
                     </Text>
                     <Text style={styles.headerText1}>
-                      Total items: {n} : {readyQnt}
+                      Total items: {needed} : {readyQnt}
                     </Text>
-                    {n==readyQnt && (
+                    {this.props.data.processed_items && this.props.data.processed_items.processed_all && (
                     <Icon.Ionicons
                         name={'md-checkbox-outline'}
                         size={20}
@@ -109,21 +111,12 @@ export class OrderHeader extends React.Component {
 
 export class OrderFooter extends React.Component {
     render() {
-        let n=0;
-        this.props.data.items.forEach((i)=>{n += i.product_quantity})
-
-        let readyQnt=0;
-        if (this.props.data.processed_items) {
-            for (let i in this.props.data.processed_items) {
-                readyQnt += this.props.data.processed_items[i];
-            }
-        }
         return (
             <View style={styles.footer}>
                 <MyButton onPress={this.props.resetFunc} text="Reset" />
                 <View style={styles.footerIcon}>
-                {n==readyQnt && (
-                    <Icon.Ionicons
+                {this.props.data.processed_items && this.props.data.processed_items.processed_all && (
+                        <Icon.Ionicons
                         name={'md-checkbox-outline'}
                         size={28}
                         color={'#00FF00'}
