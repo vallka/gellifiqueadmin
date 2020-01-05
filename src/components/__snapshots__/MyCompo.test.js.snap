@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MyCompo Rendering MyBackground Rendering - should match to snapshot 1`] = `
-<Component
+<View
   style={
     Object {
       "height": "100%",
@@ -12,7 +12,7 @@ exports[`MyCompo Rendering MyBackground Rendering - should match to snapshot 1`]
     }
   }
 >
-  <Component
+  <Image
     source={1}
     style={
       Object {
@@ -23,7 +23,7 @@ exports[`MyCompo Rendering MyBackground Rendering - should match to snapshot 1`]
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`MyCompo Rendering MyButton Rendering should match to snapshot 1`] = `
@@ -44,7 +44,7 @@ exports[`MyCompo Rendering MyButton Rendering should match to snapshot 1`] = `
   }
   underlayColor="black"
 >
-  <Component
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -53,6 +53,6 @@ exports[`MyCompo Rendering MyButton Rendering should match to snapshot 1`] = `
     }
   >
     TEST LABEL
-  </Component>
+  </Text>
 </TouchableHighlight>
 `;

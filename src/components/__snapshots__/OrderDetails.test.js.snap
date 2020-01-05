@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OrderDetails components Rendering OrderFooter Rendering - all processed - should match to snapshot 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#C108C780",
@@ -13,7 +13,7 @@ exports[`OrderDetails components Rendering OrderFooter Rendering - all processed
   <MyButton
     text="Reset"
   />
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -28,12 +28,12 @@ exports[`OrderDetails components Rendering OrderFooter Rendering - all processed
       name="md-checkbox-outline"
       size={28}
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`OrderDetails components Rendering OrderFooter Rendering should match to snapshot 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#C108C780",
@@ -45,7 +45,7 @@ exports[`OrderDetails components Rendering OrderFooter Rendering should match to
   <MyButton
     text="Reset"
   />
-  <Component
+  <View
     style={
       Object {
         "alignItems": "center",
@@ -54,11 +54,11 @@ exports[`OrderDetails components Rendering OrderFooter Rendering should match to
       }
     }
   />
-</Component>
+</View>
 `;
 
 exports[`OrderDetails components Rendering OrderHeader Rendering - all processed - should match to snapshot 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#C108C780",
@@ -66,7 +66,7 @@ exports[`OrderDetails components Rendering OrderHeader Rendering - all processed
     }
   }
 >
-  <Component
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -75,8 +75,8 @@ exports[`OrderDetails components Rendering OrderHeader Rendering - all processed
     }
   >
     17/04/19 08:05
-  </Component>
-  <Component
+  </Text>
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -85,8 +85,8 @@ exports[`OrderDetails components Rendering OrderHeader Rendering - all processed
     }
   >
     ami freeman
-  </Component>
-  <Component
+  </Text>
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -95,8 +95,8 @@ exports[`OrderDetails components Rendering OrderHeader Rendering - all processed
     }
   >
     44 Bala Street Anfield Liverpool
-  </Component>
-  <Component
+  </Text>
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -105,8 +105,8 @@ exports[`OrderDetails components Rendering OrderHeader Rendering - all processed
     }
   >
     L4 2QW
-  </Component>
-  <Component
+  </Text>
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -115,15 +115,15 @@ exports[`OrderDetails components Rendering OrderHeader Rendering - all processed
     }
   >
     amii_f_@hotmail.com
-  </Component>
-  <Component
+  </Text>
+  <View
     style={
       Object {
         "flexDirection": "row",
       }
     }
   >
-    <Component
+    <Text
       style={
         Object {
           "color": "#fff",
@@ -134,8 +134,8 @@ exports[`OrderDetails components Rendering OrderHeader Rendering - all processed
     >
       Positions: 
       3
-    </Component>
-    <Component
+    </Text>
+    <Text
       style={
         Object {
           "color": "#fff",
@@ -148,7 +148,7 @@ exports[`OrderDetails components Rendering OrderHeader Rendering - all processed
       6
        : 
       1
-    </Component>
+    </Text>
     <Icon
       allowFontScaling={false}
       color="#00FF00"
@@ -160,12 +160,12 @@ exports[`OrderDetails components Rendering OrderHeader Rendering - all processed
         }
       }
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;
 
 exports[`OrderDetails components Rendering OrderHeader Rendering should match to snapshot 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#C108C780",
@@ -173,7 +173,7 @@ exports[`OrderDetails components Rendering OrderHeader Rendering should match to
     }
   }
 >
-  <Component
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -182,8 +182,8 @@ exports[`OrderDetails components Rendering OrderHeader Rendering should match to
     }
   >
     17/04/19 08:05
-  </Component>
-  <Component
+  </Text>
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -192,8 +192,8 @@ exports[`OrderDetails components Rendering OrderHeader Rendering should match to
     }
   >
     ami freeman
-  </Component>
-  <Component
+  </Text>
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -202,8 +202,8 @@ exports[`OrderDetails components Rendering OrderHeader Rendering should match to
     }
   >
     44 Bala Street Anfield Liverpool
-  </Component>
-  <Component
+  </Text>
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -212,8 +212,8 @@ exports[`OrderDetails components Rendering OrderHeader Rendering should match to
     }
   >
     L4 2QW
-  </Component>
-  <Component
+  </Text>
+  <Text
     style={
       Object {
         "color": "#fff",
@@ -222,15 +222,15 @@ exports[`OrderDetails components Rendering OrderHeader Rendering should match to
     }
   >
     amii_f_@hotmail.com
-  </Component>
-  <Component
+  </Text>
+  <View
     style={
       Object {
         "flexDirection": "row",
       }
     }
   >
-    <Component
+    <Text
       style={
         Object {
           "color": "#fff",
@@ -241,8 +241,8 @@ exports[`OrderDetails components Rendering OrderHeader Rendering should match to
     >
       Positions: 
       3
-    </Component>
-    <Component
+    </Text>
+    <Text
       style={
         Object {
           "color": "#fff",
@@ -255,13 +255,13 @@ exports[`OrderDetails components Rendering OrderHeader Rendering should match to
       6
        : 
       0
-    </Component>
-  </Component>
-</Component>
+    </Text>
+  </View>
+</View>
 `;
 
 exports[`OrderDetails components Rendering OrderItem Rendering - processed -  should match to snapshot 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -272,7 +272,7 @@ exports[`OrderDetails components Rendering OrderItem Rendering - processed -  sh
     }
   }
 >
-  <Component
+  <Image
     source={
       Object {
         "uri": "https://www.gellifique.co.uk/670-medium_default/img.jpg",
@@ -287,14 +287,14 @@ exports[`OrderDetails components Rendering OrderItem Rendering - processed -  sh
       }
     }
   />
-  <Component
+  <View
     style={
       Object {
         "flex": 1,
       }
     }
   >
-    <Component
+    <Text
       style={
         Object {
           "color": "#fff",
@@ -304,8 +304,8 @@ exports[`OrderDetails components Rendering OrderItem Rendering - processed -  sh
       }
     >
       Pro 036 15ml (193)
-    </Component>
-    <Component
+    </Text>
+    <Text
       style={
         Object {
           "color": "#fff",
@@ -315,8 +315,8 @@ exports[`OrderDetails components Rendering OrderItem Rendering - processed -  sh
       }
     >
       P01-036
-    </Component>
-    <Component
+    </Text>
+    <Text
       style={
         Object {
           "color": "#fff",
@@ -331,8 +331,8 @@ exports[`OrderDetails components Rendering OrderItem Rendering - processed -  sh
        : 
        
       1
-    </Component>
-    <Component
+    </Text>
+    <View
       style={
         Object {
           "alignItems": "center",
@@ -350,13 +350,13 @@ exports[`OrderDetails components Rendering OrderItem Rendering - processed -  sh
         name="md-checkbox-outline"
         size={26}
       />
-    </Component>
-  </Component>
-</Component>
+    </View>
+  </View>
+</View>
 `;
 
 exports[`OrderDetails components Rendering OrderItem Rendering should match to snapshot 1`] = `
-<Component
+<View
   style={
     Object {
       "alignItems": "center",
@@ -367,7 +367,7 @@ exports[`OrderDetails components Rendering OrderItem Rendering should match to s
     }
   }
 >
-  <Component
+  <Image
     source={
       Object {
         "uri": "https://www.gellifique.co.uk/670-medium_default/img.jpg",
@@ -382,14 +382,14 @@ exports[`OrderDetails components Rendering OrderItem Rendering should match to s
       }
     }
   />
-  <Component
+  <View
     style={
       Object {
         "flex": 1,
       }
     }
   >
-    <Component
+    <Text
       style={
         Object {
           "color": "#fff",
@@ -399,8 +399,8 @@ exports[`OrderDetails components Rendering OrderItem Rendering should match to s
       }
     >
       Pro 036 15ml (193)
-    </Component>
-    <Component
+    </Text>
+    <Text
       style={
         Object {
           "color": "#fff",
@@ -410,8 +410,8 @@ exports[`OrderDetails components Rendering OrderItem Rendering should match to s
       }
     >
       P01-036
-    </Component>
-    <Component
+    </Text>
+    <Text
       style={
         Object {
           "color": "#fff",
@@ -426,12 +426,12 @@ exports[`OrderDetails components Rendering OrderItem Rendering should match to s
        : 
        
       0
-    </Component>
+    </Text>
     <MyButton
       onLongPress={[Function]}
       onPress={[Function]}
       text="+"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;

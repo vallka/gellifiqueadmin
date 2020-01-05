@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HomeScreen Rendering should match to snapshot 1`] = `
-<Component
+<View
   style={
     Object {
       "backgroundColor": "#00f",
@@ -10,7 +10,7 @@ exports[`HomeScreen Rendering should match to snapshot 1`] = `
   }
 >
   <MyBackground />
-  <Component
+  <View
     style={
       Object {
         "backgroundColor": "transparent",
@@ -25,12 +25,12 @@ exports[`HomeScreen Rendering should match to snapshot 1`] = `
     />
     <MyButton
       onPress={[Function]}
-      text="Orders"
+      text="Orders 2"
     />
     <MyButton
       onPress={[Function]}
-      text="Orders"
+      text="Orders 3"
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;

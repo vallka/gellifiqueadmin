@@ -30,8 +30,8 @@ export default class HomeScreen extends React.Component {
           }}
         >
         <MyButton text='Orders' onPress={()=>this.props.navigation.navigate('Orders')}/>
-        <MyButton text='Orders' onPress={()=>this.props.navigation.navigate('Orders')}/>
-        <MyButton text='Orders' onPress={()=>this.props.navigation.navigate('Orders')}/>
+        <MyButton text='Orders 2' onPress={()=>this.props.navigation.navigate('Orders')}/>
+        <MyButton text='Orders 3' onPress={()=>this.props.navigation.navigate('Orders')}/>
 
         </View>
       </View>

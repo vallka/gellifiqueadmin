@@ -17,7 +17,7 @@ exports[`Button Rendering should match to snapshot 1`] = `
     }
   }
 >
-  <Component
+  <Text
     style={
       Object {
         "alignSelf": "center",
@@ -28,6 +28,6 @@ exports[`Button Rendering should match to snapshot 1`] = `
     }
   >
     test label
-  </Component>
+  </Text>
 </TouchableOpacity>
 `;

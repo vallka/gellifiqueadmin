@@ -86,7 +86,7 @@ OrdersStack.navigationOptions = {
 };
 
 const AccountStack = createStackNavigator({
-  Account: AccountScreen,
+  Account: SettingsScreen,
 });
 
 AccountStack.navigationOptions = {

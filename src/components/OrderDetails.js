@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dimensions, Text, StyleSheet, View, Image } from 'react-native';
-import { Icon } from 'expo';
+//import { Icon } from 'expo';
+import { Ionicons } from '@expo/vector-icons';
 
 import { MyButton } from '../components/MyCompo';
 
@@ -30,7 +31,14 @@ export class OrderItem extends React.Component {
             {this.props.item.product_reference}
           </Text>
           <Text style={styles.txtSmall}>
-            Quantity: {this.props.item.product_quantity} {' : '} {readyQnt}
+            Quantity: {this.props.item.product_quantity + 
+                (this.props.item.unity>1 ? '/'+this.props.item.product_quantity*this.props.item.unity:'') +
+                ' : ' + readyQnt + 
+                (this.props.item.unity>1 ? '/'+readyQnt*this.props.item.unity:'')
+                }
+          </Text>
+          <Text style={styles.txtSmall}>
+            Available: {this.props.item.quantity}
           </Text>
             {(readyQnt < this.props.item.product_quantity) ? ( 
                 <MyButton onPress={()=>this.props.onPressItem(this.props.item.product_id)} 
@@ -38,7 +46,7 @@ export class OrderItem extends React.Component {
                 text="+" />
             ) : (
                 <View style={styles.txtOk}>
-                    <Icon.Ionicons
+                    <Ionicons
                         name={'md-checkbox-outline'}
                         size={26}
                         color={'#00FF00'}
@@ -54,13 +62,20 @@ export class OrderItem extends React.Component {
 export class OrderHeader extends React.Component {
     render() {
         let needed=0;
-        this.props.data.items.forEach((i)=>{needed += i.product_quantity})
+        let needed_u=0;
+        this.props.data.items.forEach((i)=>{needed += i.product_quantity;needed_u += i.product_quantity*i.unity})
 
         let readyQnt=0;
+        let readyQnt_u=0;
         if (this.props.data.processed_items) {
             for (let i in this.props.data.processed_items) {
                 if (i.substr(0,7)=='product') {
                     readyQnt += this.props.data.processed_items[i];
+                    this.props.data.items.forEach((j)=>{
+                        if (i.substr(7)==j.product_id.toString()) {
+                            readyQnt_u += this.props.data.processed_items[i]*j.unity;
+                        }
+                    })
                 }
             }
         }
@@ -74,7 +89,10 @@ export class OrderHeader extends React.Component {
                       }
                     </Text>
                     <Text style={styles.headerText}>
-                        { this.props.data.firstname+' '+this.props.data.lastname }
+                        { (this.props.data.new? '★ ':'') + this.props.data.firstname_a+' '+this.props.data.lastname_a +
+                            ((this.props.data.firstname_a.toUpperCase()!=this.props.data.firstname.toUpperCase() || this.props.data.lastname_a.toUpperCase()!=this.props.data.lastname.toUpperCase()) ? 
+                            ' ('+ this.props.data.firstname+' '+this.props.data.lastname +') ' : ' ') + this.props.data.email
+                      }
                     </Text>
                     <Text style={styles.headerText}>
                         { this.props.data.address1+' ' 
@@ -83,20 +101,24 @@ export class OrderHeader extends React.Component {
                         }
                     </Text>
                     <Text style={styles.headerText}>
-                        { this.props.data.postcode.toUpperCase() }
+                        { this.props.data.postcode.toUpperCase() + ' - ' + this.props.data.country }
                     </Text>
                     <Text style={styles.headerText}>
-                      {this.props.data.email }
+                      {this.props.data.carrier }
                     </Text>
                     <View style={{flexDirection: 'row'}}>
                     <Text style={styles.headerText1}>
                       Positions: {this.props.data.items.length}
                     </Text>
                     <Text style={styles.headerText1}>
-                      Total items: {needed} : {readyQnt}
+                      Total items: {needed + 
+                        (needed_u!=needed ? '/' + needed_u : '')
+                        + ' : ' + readyQnt +
+                        (readyQnt_u!=readyQnt ? '/' + readyQnt_u : '')
+                        }
                     </Text>
                     {this.props.data.processed_items && this.props.data.processed_items.processed_all && (
-                    <Icon.Ionicons
+                    <Ionicons
                         name={'md-checkbox-outline'}
                         size={20}
                         color={'#00FF00'}
@@ -116,7 +138,7 @@ export class OrderFooter extends React.Component {
                 <MyButton onPress={this.props.resetFunc} text="Reset" />
                 <View style={styles.footerIcon}>
                 {this.props.data.processed_items && this.props.data.processed_items.processed_all && (
-                        <Icon.Ionicons
+                        <Ionicons
                         name={'md-checkbox-outline'}
                         size={28}
                         color={'#00FF00'}

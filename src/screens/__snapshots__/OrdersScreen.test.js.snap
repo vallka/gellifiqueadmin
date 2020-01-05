@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OrdersScreen Rendering should match to snapshot 1`] = `
-<Component
+<View
   style={
     Object {
       "flex": 1,
@@ -9,7 +9,7 @@ exports[`OrdersScreen Rendering should match to snapshot 1`] = `
   }
 >
   <MyBackground />
-  <Component
+  <View
     style={
       Object {
         "backgroundColor": "transparent",
@@ -124,11 +124,12 @@ exports[`OrdersScreen Rendering should match to snapshot 1`] = `
       onEndReachedThreshold={2}
       onRefresh={[Function]}
       refreshing={false}
+      removeClippedSubviews={false}
       renderItem={[Function]}
       scrollEventThrottle={50}
       updateCellsBatchingPeriod={50}
       windowSize={21}
     />
-  </Component>
-</Component>
+  </View>
+</View>
 `;

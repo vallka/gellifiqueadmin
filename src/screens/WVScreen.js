@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Text, View, StyleSheet,WebView,Button,ActivityIndicator,TouchableOpacity,SafeAreaView,Platform,BackHandler,Image,Dimensions  } from 'react-native';
-import { Icon } from 'expo';
+//import { Icon } from 'expo';
+import { Ionicons } from '@expo/vector-icons';
+
 
 import TabBarIcon from '../components/TabBarIcon';
 import Colors from '../constants/Colors';
@@ -166,7 +168,7 @@ export default class WVScreen extends React.Component {
                 { (this.state.canGoBack || Platform.OS==='ios') && (
                 <View>
                 <TouchableOpacity onPress={()=>this.child.goBack()}>
-                    <Icon.Ionicons
+                    <Ionicons
                             name={Platform.OS === 'ios' ? 'ios-arrow-round-back' : 'md-arrow-round-back'}
                             size={36}
                             style={{ marginBottom: -3 }}

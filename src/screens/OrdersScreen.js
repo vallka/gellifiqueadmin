@@ -106,17 +106,23 @@ export default class OrdersScreen extends React.Component {
                       </TouchableOpacity>
 
                       <Text  style={styles.txtSmall}>
-                          { item.firstname+' '+item.lastname+' '+item.postcode.toUpperCase() }
+                          { (item.new? '★ ':'') + item.firstname_a+' '+item.lastname_a +
+                            ((item.firstname_a.toUpperCase()!=item.firstname.toUpperCase() || item.lastname_a.toUpperCase()!=item.lastname.toUpperCase()) ? 
+                              ' ('+ item.firstname+' '+item.lastname +')' : '')
+                          }
                       </Text>
                       <Text  style={styles.txtSmall}>
-                          { item.email }
+                          { item.postcode.toUpperCase() + ' - ' + item.country }
+                      </Text>
+                      <Text  style={styles.txtSmall}>
+                          { item.carrier }
                       </Text>
                         <View  style={{
                           flex: 1,
                           flexDirection: 'row',
                         }}>
                           <Text  style={styles.txtSmallButton}>
-                            { this.translateState(item.current_state) }
+                            { item.order_state }
                           </Text>
                           <Text  style={styles.txtSmall}>
                             { item.shipping_number }

@@ -2,7 +2,8 @@ import React from 'react';
 import { 
   StyleSheet, Text, View, FlatList, ActivityIndicator, Alert, Vibration
 } from 'react-native';
-import { SecureStore } from 'expo';
+//import { SecureStore } from 'expo';
+import * as SecureStore from 'expo-secure-store';
 import axios from "axios";
 
 import { MyBackground } from '../components/MyCompo';
